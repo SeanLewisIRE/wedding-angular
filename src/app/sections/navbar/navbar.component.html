@@ -1,0 +1,63 @@
+<nav class="relative flex flex-wrap items-center justify-between px-2 py-3 bg-slate-400">
+    <div class="container px-4 mx-auto flex flex-wrap items-center justify-between">
+        <div class="w-full relative flex justify-between lg:w-auto  px-4 lg:static lg:block lg:justify-start">
+            <a class="text-sm font-bold leading-relaxed inline-block mr-4 py-2 whitespace-nowrap uppercase text-white"
+                href="#pablo">
+                Á &amp; S
+            </a>
+            <button
+                class="text-red bg-red cursor-pointer text-xl leading-none px-3 py-1 border border-solid border-transparent rounded bg-transparent block lg:hidden outline-none focus:outline-none"
+                type="button" (click)="toggleNavbar()">
+                <i class="bg-red fas fa-bars"></i>
+            </button>
+            <!-- Here -->
+            <button (click)="toggleNavbar()"
+                type="button"
+                class="lg:hidden fixed z-50 right-0 mx-4 my-4 bg-gray-900 inline items-center justify-center p-2 rounded-md
+                text-gray-400 hover:text-white hover:bg-gray-800 focus:outline-none focus:ring-2 focus:ring-offset-2
+                focus:ring-offset-gray-800 focus:ring-white"
+                aria-controls="mobile-menu"
+                aria-expanded="false"
+                >
+                
+                <svg *ngIf="showMenu; else closeMenuBlock" class="block h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                    stroke="currentColor" aria-hidden="true">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M6 18L18 6M6 6l12 12" />
+                </svg>
+                <ng-template #closeMenuBlock>
+                    <svg  class="block h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                        stroke="currentColor" aria-hidden="true">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M4 6h16M4 12h16M4 18h16" />
+                    </svg>
+                </ng-template>
+                
+            </button>
+            <!-- to Here -->
+        </div>
+        <div [ngClass]="{'hidden': !showMenu, 'flex': showMenu}" class="lg:flex lg:flex-grow items-center">
+            <ul class="flex flex-col lg:flex-row list-none ml-auto">
+                <li class="nav-item">
+                    <a class="px-3 py-2 flex items-center text-xs uppercase font-bold leading-snug text-white hover:opacity-75"
+                        href="#pablo">
+                        <i class="fab fa-facebook-square text-lg leading-lg text-white opacity-75"></i><span
+                            class="ml-2">Share</span>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="px-3 py-2 flex items-center text-xs uppercase font-bold leading-snug text-white hover:opacity-75"
+                        href="#pablo">
+                        <i class="fab fa-twitter text-lg leading-lg text-white opacity-75"></i><span
+                            class="ml-2">Tweet</span>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="px-3 py-2 flex items-center text-xs uppercase font-bold leading-snug text-white hover:opacity-75"
+                        href="#pablo">
+                        <i class="fab fa-pinterest text-lg leading-lg text-white opacity-75"></i><span
+                            class="ml-2">Pin</span>
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>
