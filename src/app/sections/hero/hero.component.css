@@ -1,12 +1,12 @@
 .hero {
-    position: relative;
+    position: absolute;
     text-align: center;
     color: white;
 }
 
 .centered {
     position: absolute;
-    top: 32.5%;
+    top: 55%;
     left: 50%;
     transform: translate(-50%, -50%);
 }
