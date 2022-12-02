@@ -1,9 +1,11 @@
-.hero {
+.text-hero {
+    background-color: #F0FFE1;
+    /* position: absolute;
     text-align: center;
-    color: white;
+    color: white; */
 }
 
-.centered {
+/* .centered {
     position: absolute;
     top: 55%;
     left: 50%;
@@ -17,4 +19,5 @@
 
 .test {
     background-color: red;
-}
+}  */
+
