@@ -1,3 +1,28 @@
 @import 'tailwindcss/base';
 @import 'tailwindcss/components';
 @import 'tailwindcss/utilities';
+@import url('https://fonts.googleapis.com/css2?family=Inter&family=Lora&display=swap');
+
+.lora {
+    font-family: 'Lora', serif;
+}
+
+.inter {
+    font-family: 'Inter', sans-serif;
+}
+
+.green-text {
+    color: #376029;
+}
+
+.h-screen-50 {
+    height: 50vh;
+}
+
+.h-screen-75 {
+    height: 75vh;
+}
+
+.h-screen-150 {
+    height: 150vh;
+}
