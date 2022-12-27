@@ -8,6 +8,7 @@ import { HeroComponent } from './sections/hero/hero.component';
 import { TextHeroComponent } from './sections/text-hero/text-hero.component';
 import { CarouselComponent } from './sections/carousel/carousel.component';
 import { WhereWhenComponent } from './sections/where-when/where-when.component';
+import { TravelLodgingComponent } from './sections/travel-lodging/travel-lodging.component';
 
 @NgModule({
   declarations: [
@@ -16,7 +17,8 @@ import { WhereWhenComponent } from './sections/where-when/where-when.component';
     HeroComponent,
     TextHeroComponent,
     CarouselComponent,
-    WhereWhenComponent
+    WhereWhenComponent,
+    TravelLodgingComponent
   ],
   imports: [
     BrowserModule,

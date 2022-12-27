@@ -15,6 +15,10 @@
     color: #376029;
 }
 
+.light-green-text {
+    color: #F0FFE1;
+}
+
 .h-screen-50 {
     height: 50vh;
 }
@@ -26,3 +30,4 @@
 .h-screen-150 {
     height: 150vh;
 }
+
