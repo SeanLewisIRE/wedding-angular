@@ -1,0 +1,16 @@
+.section-1 {
+    background-color: #FFFCE1;
+}
+
+.section-2 {
+    background-image: url("../../../assets/chateau-PLACEHOLDER.jpg");
+    background-size: cover;
+    opacity: 0.5;
+}
+
+.centered {
+    position: absolute;
+    top: 55%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}

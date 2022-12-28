@@ -9,6 +9,7 @@ import { TextHeroComponent } from './sections/text-hero/text-hero.component';
 import { CarouselComponent } from './sections/carousel/carousel.component';
 import { WhereWhenComponent } from './sections/where-when/where-when.component';
 import { TravelLodgingComponent } from './sections/travel-lodging/travel-lodging.component';
+import { GiftsComponent } from './sections/gifts/gifts.component';
 
 @NgModule({
   declarations: [
@@ -18,7 +19,8 @@ import { TravelLodgingComponent } from './sections/travel-lodging/travel-lodging
     TextHeroComponent,
     CarouselComponent,
     WhereWhenComponent,
-    TravelLodgingComponent
+    TravelLodgingComponent,
+    GiftsComponent
   ],
   imports: [
     BrowserModule,

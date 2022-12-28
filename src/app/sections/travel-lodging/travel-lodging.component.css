@@ -1,3 +1,9 @@
 .travel-lodging {
   background-color: #376029;
 }
+
+.content-section ul li:before {
+  content: "\2794";
+  color: #F0FFE1;
+}
+
