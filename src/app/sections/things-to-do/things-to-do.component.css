@@ -1,0 +1,8 @@
+.things {
+    background-color: #22381B;
+}
+
+.amenity ul li:before {
+    content: "\2794";
+    color: #F0FFE1;
+}

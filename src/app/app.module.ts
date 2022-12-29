@@ -10,6 +10,8 @@ import { CarouselComponent } from './sections/carousel/carousel.component';
 import { WhereWhenComponent } from './sections/where-when/where-when.component';
 import { TravelLodgingComponent } from './sections/travel-lodging/travel-lodging.component';
 import { GiftsComponent } from './sections/gifts/gifts.component';
+import { ThingsToDoComponent } from './sections/things-to-do/things-to-do.component';
+import { RsvpComponent } from './sections/rsvp/rsvp.component';
 
 @NgModule({
   declarations: [
@@ -20,7 +22,9 @@ import { GiftsComponent } from './sections/gifts/gifts.component';
     CarouselComponent,
     WhereWhenComponent,
     TravelLodgingComponent,
-    GiftsComponent
+    GiftsComponent,
+    ThingsToDoComponent,
+    RsvpComponent
   ],
   imports: [
     BrowserModule,
