@@ -1,5 +1,6 @@
 .chateau {
     position: relative;
+    height: 100%;
 }
 
 .chateau::before {
@@ -21,4 +22,15 @@
 
 .section-2 {
     background-color: #FFFCE1;
+}
+
+@media (min-width: 768px) {
+
+    .sections {
+        height: 30%;
+    }
+
+    .chateau {
+        height: 70%;
+    }
 }
