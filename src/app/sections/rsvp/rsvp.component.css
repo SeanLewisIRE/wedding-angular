@@ -1,0 +1,21 @@
+.rsvp {
+    background-color: #EFF4FF;
+}
+
+input[type='radio'][name='buttonGroup'] {
+    display: none;
+}
+
+.radio-label {
+    display: inline-block;
+    padding: 3px;
+    border: 1px solid #e0e0e0;
+    border-radius: 3px;
+    background-color: #F0F0F0;
+    width: 10em;
+    text-align: center;
+}
+
+input[type='radio'][name='buttonGroup']:checked+label {
+    background-color: #a0a0a0;
+}

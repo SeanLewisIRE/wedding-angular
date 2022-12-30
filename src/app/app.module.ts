@@ -12,6 +12,7 @@ import { TravelLodgingComponent } from './sections/travel-lodging/travel-lodging
 import { GiftsComponent } from './sections/gifts/gifts.component';
 import { ThingsToDoComponent } from './sections/things-to-do/things-to-do.component';
 import { RsvpComponent } from './sections/rsvp/rsvp.component';
+import { FooterComponent } from './sections/footer/footer.component';
 
 @NgModule({
   declarations: [
@@ -24,7 +25,8 @@ import { RsvpComponent } from './sections/rsvp/rsvp.component';
     TravelLodgingComponent,
     GiftsComponent,
     ThingsToDoComponent,
-    RsvpComponent
+    RsvpComponent,
+    FooterComponent
   ],
   imports: [
     BrowserModule,

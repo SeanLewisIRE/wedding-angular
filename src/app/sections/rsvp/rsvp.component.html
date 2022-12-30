@@ -1,1 +1,31 @@
-<p>rsvp works!</p>
+<div class="rsvp h-screen-75">
+    <div class="flex flex-col w-10/12 m-auto">
+        <div class="flex flex-col items-center py-12">
+            <p class="inter text-xs font-medium green-text">WE'D LOVE TO SEE YOU THERE</p>
+            <h3 class="green-text text-3xl lora">RSVP</h3>
+        </div>
+        
+        <form class="contact-form flex flex-col" (submit)="sendEmail($event)">
+            <label class="inter green-text">NAME</label>
+            <input type="text" name="user_name">
+            <label class="inter green-text">EMAIL</label>
+            <input type="email" name="user_email">
+            <div class="flex flex-row">
+                <input type="radio" name="buttonGroup" value="one" id="one"><label class="radio-label" for="one">I'LL BE THERE</label>
+                <input type="radio" name="buttonGroup" value="two" id="two"><label class="radio-label" for="two">I CAN'T MAKE IT</label>
+            </div>
+            
+            
+            <label class="inter green-text">NUMBER OF GUESTS</label>
+            <div class="flex flex-row">
+                <input type="radio" name="buttonGroup" value="one" id="one"><label class="radio-label" for="one">1</label>
+                <input type="radio" name="buttonGroup" value="two" id="two"><label class="radio-label" for="two">2</label>
+                <input type="radio" name="buttonGroup" value="three" id="three"><label class="radio-label" for="three">3</label>
+                <input type="radio" name="buttonGroup" value="four" id="four"><label class="radio-label" for="four">4</label>
+                <input type="radio" name="buttonGroup" value="five" id="five"><label class="radio-label" for="five">5</label>
+            </div>
+
+            <input class="inter bg-green-800 hover:bg-green-900 text-white font-bold py-2 px-4 rounded-full" type="submit" value="Send">
+        </form>
+    </div>
+</div>
