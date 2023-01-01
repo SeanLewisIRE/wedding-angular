@@ -1,7 +1,7 @@
 <nav id="nav" [ngClass]="[menuStyle]" class="fixed w-screen flex flex-wrap items-center justify-between px-2 py-3">
-    <div class="container px-4 mx-auto flex flex-wrap items-center justify-between" [@fade]="'in'">
+    <div class="container px-4 mx-auto flex flex-wrap items-center justify-between">
         <div class="w-full flex justify-between lg:w-auto  px-4 lg:static lg:block lg:justify-start">
-            <a class="text-sm font-bold leading-relaxed inline-block mr-4 py-2 whitespace-nowrap uppercase text-white"
+            <a class="opacity-100 text-sm font-bold leading-relaxed inline-block mr-4 py-2 whitespace-nowrap uppercase text-white"
                 href="#pablo">
                 Á &amp; S
             </a>
@@ -29,24 +29,24 @@
         <div [ngClass]="{'hidden': !showMenu, 'flex': showMenu}" class="lg:flex lg:flex-grow items-center" >
             <ul class="flex flex-col lg:flex-row list-none ml-auto">
                 <li class="nav-item">
-                    <a class="px-3 py-2 flex items-center text-xs uppercase font-bold leading-snug text-white hover:opacity-75"
-                        href="#pablo">
-                        <i class="fab fa-facebook-square text-lg leading-lg text-white opacity-75"></i><span
-                            class="ml-2">Share</span>
+                    <a class="px-3 py-2 flex items-center text-xs uppercase font-bold leading-snug text-white"
+                        href="#RSVP">
+                        <i class="fab fa-facebook-square text-lg leading-lg text-white"></i><span
+                            class="ml-2">RSVP</span>
                     </a>
                 </li>
                 <li class="nav-item">
-                    <a class="px-3 py-2 flex items-center text-xs uppercase font-bold leading-snug text-white hover:opacity-75"
-                        href="#pablo">
-                        <i class="fab fa-twitter text-lg leading-lg text-white opacity-75"></i><span
-                            class="ml-2">Tweet</span>
+                    <a class="px-3 py-2 flex items-center text-xs uppercase font-bold leading-snug text-white"
+                        href="#where&when">
+                        <i class="fab fa-twitter text-lg leading-lg text-white"></i><span
+                            class="ml-2">Where & When</span>
                     </a>
                 </li>
                 <li class="nav-item">
-                    <a class="px-3 py-2 flex items-center text-xs uppercase font-bold leading-snug text-white hover:opacity-75"
-                        href="#pablo">
-                        <i class="fab fa-pinterest text-lg leading-lg text-white opacity-75"></i><span
-                            class="ml-2">Pin</span>
+                    <a class="px-3 py-2 flex items-center text-xs uppercase font-bold leading-snug text-white"
+                        href="#travel">
+                        <i class="fab fa-pinterest text-lg leading-lg text-white"></i><span
+                            class="ml-2">Travel</span>
                     </a>
                 </li>
             </ul>

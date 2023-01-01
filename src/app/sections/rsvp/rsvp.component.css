@@ -2,11 +2,7 @@
     background-color: #EFF4FF;
 }
 
-input[type='radio'][name='numberGroup'] {
-    display: none;
-}
-
-input[type='radio'][name='rsvpGroup'] {
+input[type='radio']{
     display: none;
 }
 
@@ -25,7 +21,12 @@ input[type='radio'][name='rsvpGroup'] {
     color: #22381B;
 }
 
-input[type='radio'][name='numberGroup']:checked+label {
+input[type='radio'][name='adultsGroup']:checked+label {
+    background-color: #22381B;
+    color: #FFF
+}
+
+input[type='radio'][name='kidsGroup']:checked+label {
     background-color: #22381B;
     color: #FFF
 }
