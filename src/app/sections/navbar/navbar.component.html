@@ -1,8 +1,8 @@
-<nav id="nav" [ngClass]="[menuStyle]" class="fixed w-screen flex flex-wrap items-center justify-between px-2 py-3">
+<nav id="nav" [ngClass]="[menuStyle]" class="fixed w-screen flex flex-wrap items-center px-2 py-3">
     <div class="container px-4 mx-auto flex flex-wrap items-center justify-between">
         <div class="w-full flex justify-between lg:w-auto  px-4 lg:static lg:block lg:justify-start">
             <a class="opacity-100 text-sm font-bold leading-relaxed inline-block mr-4 py-2 whitespace-nowrap uppercase text-white"
-                href="#pablo">
+                href="#">
                 Á &amp; S
             </a>
             <button (click)="toggleNavbar()"
@@ -28,25 +28,25 @@
         </div>
         <div [ngClass]="{'hidden': !showMenu, 'flex': showMenu}" class="lg:flex lg:flex-grow items-center" >
             <ul class="flex flex-col lg:flex-row list-none ml-auto">
-                <li class="nav-item">
+                <li class="nav-item py-4 lg:py-0">
                     <a class="px-3 py-2 flex items-center text-xs uppercase font-bold leading-snug text-white"
                         href="#RSVP">
                         <i class="fab fa-facebook-square text-lg leading-lg text-white"></i><span
-                            class="ml-2">RSVP</span>
+                            class="ml-2 green-text hover:text-white">RSVP</span>
                     </a>
                 </li>
-                <li class="nav-item">
+                <li class="nav-item pb-1 lg:pb-0">
                     <a class="px-3 py-2 flex items-center text-xs uppercase font-bold leading-snug text-white"
                         href="#where&when">
                         <i class="fab fa-twitter text-lg leading-lg text-white"></i><span
-                            class="ml-2">Where & When</span>
+                            class="ml-2 hover:green-text">Where & When</span>
                     </a>
                 </li>
-                <li class="nav-item">
+                <li class="nav-item pb-1 lg:pb-0">
                     <a class="px-3 py-2 flex items-center text-xs uppercase font-bold leading-snug text-white"
                         href="#travel">
                         <i class="fab fa-pinterest text-lg leading-lg text-white"></i><span
-                            class="ml-2">Travel</span>
+                            class="ml-2 hover:green-text">Travel</span>
                     </a>
                 </li>
             </ul>

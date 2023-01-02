@@ -14,6 +14,7 @@ import { ThingsToDoComponent } from './sections/things-to-do/things-to-do.compon
 import { RsvpComponent } from './sections/rsvp/rsvp.component';
 import { FooterComponent } from './sections/footer/footer.component';
 import { ReactiveFormsModule } from '@angular/forms';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 @NgModule({
   declarations: [
@@ -32,7 +33,8 @@ import { ReactiveFormsModule } from '@angular/forms';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    BrowserAnimationsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
