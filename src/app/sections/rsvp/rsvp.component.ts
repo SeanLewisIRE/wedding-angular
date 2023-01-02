@@ -21,9 +21,9 @@ export class RsvpComponent implements OnInit {
     this.rsvpForm = this.formBuilder.group({
       name: '',
       email: '',
-      rsvpValue: '',
+      rsvpBool: '',
       numberOfGuests: '',
-      children: '',
+      childrenBool: '',
       numberOfChildren: '',
       message: ''
     })
