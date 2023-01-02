@@ -20,7 +20,7 @@ input[type='radio']{
     color: #22381B;
 }
 
-input[type='radio'][name='rsvpBool']:checked+label {
+input[type='radio'][formControlName='rsvpBool']:checked+label {
     background-color: #22381B;
     color: #FFF
 }
