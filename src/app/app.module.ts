@@ -13,6 +13,7 @@ import { GiftsComponent } from './sections/gifts/gifts.component';
 import { ThingsToDoComponent } from './sections/things-to-do/things-to-do.component';
 import { RsvpComponent } from './sections/rsvp/rsvp.component';
 import { FooterComponent } from './sections/footer/footer.component';
+import { ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -30,7 +31,8 @@ import { FooterComponent } from './sections/footer/footer.component';
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

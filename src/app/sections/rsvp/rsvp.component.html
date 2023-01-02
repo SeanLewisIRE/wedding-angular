@@ -5,21 +5,21 @@
             <h3 class="green-text text-3xl lora">RSVP</h3>
         </div>
         
-        <form class="contact-form flex flex-col" (submit)="sendEmail($event)">
+        <form class="contact-form flex flex-col" [formGroup]="rsvpForm" (submit)="sendEmail($event)">
             <label class="py-0.5 inter text-xs font-medium green-text">NAME</label>
             <input class="my-1 px-1 py-0.5" type="text" name="user_name">
             <label class="py-0.5 inter text-xs font-medium green-text">EMAIL</label>
             <input class="my-1 px-1 py-0.5" type="email" name="user_email">
 
             <div class="my-5 flex flex-row justify-around">
-                <input type="radio" name="rsvpGroup" value="rsvp_yes" id="rsvp_yes">
-                <label class="radio-label" for="rsvp_yes" ng-model="rsvp_value">I'LL BE THERE</label> 
+                <input type="radio" name="rsvpGroup" value="rsvp_yes" id="rsvp_yes" formControlName="rsvpValue">
+                <label class="radio-label" for="rsvp_yes" ng-model="rsvp_value">BE THERE</label> 
                 <!-- {{'adultsGroup'.valueOf.toString() != '1' || 'adultsGroup'.valueOf.toString() != null ? "WE'LL" : "I'LL"}} -->
                 <input type="radio" name="rsvpGroup" value="rsvp_no" id="rsvp_no">
                 <label class="radio-label" for="rsvp_no" ng-model="rsvp_value">I CAN'T MAKE IT</label>
             </div>
 
-            <div *ngIf="'rsvpGroup'.valueOf.toString() == 'rsvp_yes'">
+            <div *ngIf="rsvpForm.get('rsvpValue')?.value == 'rsvp_yes'">
                 <label class="inter text-xs font-medium green-text">NUMBER OF GUESTS</label>
                 <div class="flex flex-row py-3 justify-evenly">
                     <input type="radio" name="adultsGroup" value="1" id="1"><label class="radio-label" for="one">1</label>

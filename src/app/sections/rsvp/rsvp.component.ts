@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { FormBuilder, FormControl, FormGroup } from '@angular/forms';
 import emailjs, { EmailJSResponseStatus } from 'emailjs-com';
 
 @Component({
@@ -8,10 +9,25 @@ import emailjs, { EmailJSResponseStatus } from 'emailjs-com';
 })
 export class RsvpComponent implements OnInit {
 
-  constructor() { }
+  rsvpForm!: FormGroup;
+  constructor(private formBuilder: FormBuilder) {
+    this.createRsvpForm();
+  }
 
   ngOnInit(): void {
   }
+
+  createRsvpForm() {
+    this.rsvpForm = this.formBuilder.group({
+      name: '',
+      email: '',
+      rsvpValue: '',
+      numberOfGuests: '',
+      children: '',
+      numberOfChildren: '',
+      message: ''
+    })
+  };
 
   public sendEmail(e: Event) {
     e.preventDefault();
