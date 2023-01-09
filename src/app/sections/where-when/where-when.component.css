@@ -6,7 +6,7 @@
 
 .chateau::before {
     content: "";
-    background-image: url("../../../assets/chateau-PLACEHOLDER.jpg");
+    background-image: url("../../../assets/venue_image.jpeg");
     background-size: cover;
     position: absolute;
     top: 0px;
