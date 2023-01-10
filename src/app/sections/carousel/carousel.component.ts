@@ -16,14 +16,14 @@ export class CarouselComponent implements OnInit {
   ngOnInit(): void {
     if (this.locationValue == 'first') {
       this.imageLocation = [
-        'https://picsum.photos/480/570',
         '../../../assets/venue_side.jpeg',
-        'https://picsum.photos/480/570',
+        '../../../assets/middle.jpg',
+        '../../../assets/chateau_field.jpeg',
       ];
     } else if (this.locationValue == 'second') {
       this.imageLocation = [
         '../../../assets/stairs.jpeg',
-        'https://picsum.photos/480/560',
+        '../../../assets/engagement.jpg',
         '../../../assets/pool.jpeg',
       ];
     }
