@@ -38,6 +38,8 @@ export class RsvpComponent implements OnInit {
     this.createRsvpForm();
   }
 
+  emailSent: string = "";
+
   ngOnInit(): void {
   }
 
@@ -57,9 +59,9 @@ export class RsvpComponent implements OnInit {
   createRsvpForm() {
     this.rsvpForm = this.formBuilder.group({
       name: ['', Validators.required],
-      email: '',
-      rsvpBool: '',
-      numberOfGuests: 1,
+      email: ['', Validators.required, Validators.email],
+      rsvpBool: ['', Validators.required],
+      numberOfGuests: [1, Validators.required],
       childrenBool: 'babys_no',
       numberOfChildren: 0,
       message: ''
@@ -67,11 +69,14 @@ export class RsvpComponent implements OnInit {
   };
 
   public sendEmail(e: Event) {
-    e.preventDefault();
     emailjs.sendForm('wedding_service', 'template_v1thjsa', e.target as HTMLFormElement, 'UQEUSIRgdwXafTeMq')
       .then((result: EmailJSResponseStatus) => {
-        console.log(result.text);
+        if(result.status == 200){
+          this.emailSent = "sent";
+          this.rsvpForm.reset();
+        }
       }, (error) => {
+        this.emailSent = "error";
         console.log(error.text);
       });
   }

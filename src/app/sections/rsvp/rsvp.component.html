@@ -5,37 +5,37 @@
             <h3 class="green-text text-3xl lora">RSVP</h3>
         </div>
         
-        <form class="contact-form flex flex-col" [formGroup]="rsvpForm" (submit)="sendEmail($event)">
-            <label class="py-0.5 inter text-xs font-medium green-text">NAME</label>
-            <input class="my-1 px-1 py-0.5" type="text" formControlName="name" required>
-            <label class="py-0.5 inter text-xs font-medium green-text">EMAIL</label>
-            <input class="my-1 px-1 py-0.5" type="email" formControlName="email" required>
+        <form class="contact-form flex flex-col" [formGroup]="rsvpForm" (ngSubmit)="sendEmail($event)">
+            <label class="py-0.5 inter text-xs font-medium green-text">NAME *</label>
+            <input class="my-1 px-1 py-0.5" type="text" formControlName="name" name="name" required>
+            <label class="py-0.5 inter text-xs font-medium green-text">EMAIL *</label>
+            <input class="my-1 px-1 py-0.5" type="email" formControlName="email" name="email" required>
 
             <div class="my-5 flex flex-row justify-around">
-                <input type="radio" value="rsvp_yes" id="rsvp_yes" formControlName="rsvpBool" required>
+                <input type="radio" value="rsvp_yes" id="rsvp_yes" formControlName="rsvpBool" name="rsvpBool" required>
                 <label class="radio-label" for="rsvp_yes">{{rsvpForm.get('numberOfGuests')?.value != 1 || rsvpForm.get('numberOfChildren')?.value == 1 ? "WE'LL" : "I'LL"}} BE THERE</label> 
-                <input type="radio" value="rsvp_no" id="rsvp_no" formControlName="rsvpBool" (click)="decline_button(false)">
+                <input type="radio" value="rsvp_no" id="rsvp_no" formControlName="rsvpBool" name="rsvpBool" (click)="decline_button(false)">
                 <label class="radio-label" for="rsvp_no">{{rsvpForm.get('numberOfGuests')?.value != 1 || rsvpForm.get('numberOfChildren')?.value == 1 ? "WE" : "I"}} CAN'T MAKE IT</label>
             </div>
             
             <div *ngIf="rsvpForm.get('rsvpBool')?.value == 'rsvp_yes'" [@inOutAnimation]>
-                <label class="inter text-xs font-medium green-text">NUMBER OF {{rsvpForm.get('childrenBool')?.value == 'babys_yes' ? "ADULTS" : "GUESTS"}}</label>
+                <label class="inter text-xs font-medium green-text">NUMBER OF {{rsvpForm.get('childrenBool')?.value == 'babys_yes' ? "ADULTS" : "GUESTS"}} *</label>
                 <div class="flex flex-row py-3 justify-evenly">
-                    <input type="radio" value="1" formControlName="numberOfGuests" id="guestsOne"><label class="radio-label" for="guestsOne" required>1</label>
-                    <input type="radio" value="2" formControlName="numberOfGuests" id="guestsTwo"><label class="radio-label" for="guestsTwo">2</label>
-                    <input type="radio" value="3" formControlName="numberOfGuests" id="guestsThree"><label class="radio-label" for="guestsThree">3</label>
-                    <input type="radio" value="4" formControlName="numberOfGuests" id="guestsFour"><label class="radio-label" for="guestsFour">4</label>
-                    <input type="radio" value="5" formControlName="numberOfGuests" id="guestsFive"><label class="radio-label" for="guestsFive">5</label>
+                    <input type="radio" value="1" formControlName="numberOfGuests" id="guestsOne" required name="numberOfGuests"><label class="radio-label" for="guestsOne">1</label>
+                    <input type="radio" value="2" formControlName="numberOfGuests" id="guestsTwo" name="numberOfGuests"><label class="radio-label" for="guestsTwo">2</label>
+                    <input type="radio" value="3" formControlName="numberOfGuests" id="guestsThree" name="numberOfGuests"><label class="radio-label" for="guestsThree">3</label>
+                    <input type="radio" value="4" formControlName="numberOfGuests" id="guestsFour" name="numberOfGuests"><label class="radio-label" for="guestsFour">4</label>
+                    <input type="radio" value="5" formControlName="numberOfGuests" id="guestsFive" name="numberOfGuests"><label class="radio-label" for="guestsFive">5</label>
                 </div>
             
                 <div>
                     <label class="inter text-xs font-medium green-text">DES BÉBÉS</label>
                     <div class="my-5 flex flex-row justify-around">
-                        <input type="radio" value="babys_yes" id="babys_yes" formControlName="childrenBool">
+                        <input type="radio" value="babys_yes" id="babys_yes" formControlName="childrenBool" name="childrenBool">
                         <label class="radio-label" for="babys_yes">
                             OUI
                         </label>
-                        <input type="radio" value="babys_no" id="babys_no" formControlName="childrenBool">
+                        <input type="radio" value="babys_no" id="babys_no" formControlName="childrenBool" name="childrenBool">
                         <label class="radio-label text-center" for="babys_no" (click)="decline_button(false)">
                             NON
                         </label>
@@ -45,19 +45,22 @@
                 <div *ngIf="rsvpForm.get('childrenBool')?.value == 'babys_yes' && rsvpForm.get('rsvpBool')?.value == 'rsvp_yes'" [@inOutAnimation]>
                     <label class="inter text-xs font-medium green-text">COMBIEN DE BÉBÉS</label>
                     <div class="flex flex-row py-3 justify-evenly">
-                        <input type="radio" value="1" formControlName="numberOfChildren" id="kidsOne"><label class="radio-label" for="kidsOne">1</label>
-                        <input type="radio" value="2" formControlName="numberOfChildren" id="kidsTwo"><label class="radio-label" for="kidsTwo">2</label>
-                        <input type="radio" value="3" formControlName="numberOfChildren" id="kidsThree"><label class="radio-label" for="kidsThree">3</label>
-                        <input type="radio" value="4" formControlName="numberOfChildren" id="kidsFour"><label class="radio-label" for="kidsFour">4</label>
-                        <input type="radio" value="5" formControlName="numberOfChildren" id="kidsFive"><label class="radio-label" for="kidsFive">5</label>
+                        <input type="radio" value="1" formControlName="numberOfChildren" id="kidsOne" name="numberOfChildren"><label class="radio-label" for="kidsOne">1</label>
+                        <input type="radio" value="2" formControlName="numberOfChildren" id="kidsTwo" name="numberOfChildren"><label class="radio-label" for="kidsTwo">2</label>
+                        <input type="radio" value="3" formControlName="numberOfChildren" id="kidsThree" name="numberOfChildren"><label class="radio-label" for="kidsThree">3</label>
+                        <input type="radio" value="4" formControlName="numberOfChildren" id="kidsFour" name="numberOfChildren"><label class="radio-label" for="kidsFour">4</label>
+                        <input type="radio" value="5" formControlName="numberOfChildren" id="kidsFive" name="numberOfChildren"><label class="radio-label" for="kidsFive">5</label>
                     </div>
                 </div>
             </div>
 
             <label class="py-0.5 inter text-xs font-medium green-text">ANY OTHER DETAILS</label>
-            <textarea class="my-1 px-1 py-1" formControlName="message" placeholder="Dietary restrictions, or anything you need to have a great time"></textarea>
+            <textarea class="my-1 px-1 py-1" formControlName="message" name="message" placeholder="Dietary restrictions, or anything you need to have a great time"></textarea>
+            
+            <p class="py-0.5 inter text-sm font-medium green-text text-center mt-4 h-10">{{this.emailSent != "" ? this.emailSent == "sent" ? "RSVP SENT" : this.emailSent == "error" ? "There was an error sending your RSVP. Please email us directly on aineandseangethitched@gmail.com
+            " : "" : ""}}</p>
 
-            <input class="mx-auto w-24 mt-10 inter bg-green-800 hover:bg-green-900 text-white font-bold py-1 px-4 rounded-full" type="submit" value="RSVP">
+            <input [disabled]="rsvpForm.invalid || this.emailSent == 'sent'" class="mx-auto w-24 mt-6 inter bg-green-800 hover:bg-green-900 text-white font-bold py-1 px-4 rounded-full" type="submit" value="RSVP">
         </form>
     </div>
 </div>
