@@ -1,6 +1,6 @@
 import { animate, style, transition, trigger } from '@angular/animations';
 import { Component, OnInit } from '@angular/core';
-import { FormBuilder, FormControl, FormGroup } from '@angular/forms';
+import { FormBuilder, FormControl, FormGroup, Validators } from '@angular/forms';
 import emailjs, { EmailJSResponseStatus } from 'emailjs-com';
 
 @Component({
@@ -41,21 +41,34 @@ export class RsvpComponent implements OnInit {
   ngOnInit(): void {
   }
 
+  decline_button(overallRsvp : boolean) {
+    if(overallRsvp){
+      this.rsvpForm.patchValue({
+        numberOfGuests: 0,
+        numberOfChildren: 0,
+      })
+    } else {
+      this.rsvpForm.patchValue({
+        numberOfChildren: 0,
+      })
+    }
+  }
+
   createRsvpForm() {
     this.rsvpForm = this.formBuilder.group({
-      name: '',
+      name: ['', Validators.required],
       email: '',
       rsvpBool: '',
-      numberOfGuests: '1',
-      childrenBool: '',
-      numberOfChildren: '',
+      numberOfGuests: 1,
+      childrenBool: 'babys_no',
+      numberOfChildren: 0,
       message: ''
     })
   };
 
   public sendEmail(e: Event) {
     e.preventDefault();
-    emailjs.sendForm('YOUR_SERVICE_ID', 'YOUR_TEMPLATE_ID', e.target as HTMLFormElement, 'YOUR_USER_ID')
+    emailjs.sendForm('wedding_service', 'template_v1thjsa', e.target as HTMLFormElement, 'UQEUSIRgdwXafTeMq')
       .then((result: EmailJSResponseStatus) => {
         console.log(result.text);
       }, (error) => {

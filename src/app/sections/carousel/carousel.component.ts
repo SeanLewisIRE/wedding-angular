@@ -23,7 +23,7 @@ export class CarouselComponent implements OnInit {
     } else if (this.locationValue == 'second') {
       this.imageLocation = [
         '../../../assets/stairs.jpeg',
-        '../../../assets/engagement.jpg',
+        '../../../assets/engagement-cropped.jpg',
         '../../../assets/pool.jpeg',
       ];
     }

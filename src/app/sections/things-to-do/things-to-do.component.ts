@@ -45,7 +45,7 @@ export class ThingsToDoComponent implements OnInit {
       type: "Taste",
       title: "Around Agen",
       linkTitle: "Local Wine Tours",
-      link: "https://www.slanecastle.ie/",
+      link: "https://www.guide-du-lot-et-garonne.com/en/do-it-your-way/food-lovers/article-5-wine-tours-in-lot-et-garonne-for-wine-lovers-70.html",
     },
     {
       type: "Walk/Discover",
