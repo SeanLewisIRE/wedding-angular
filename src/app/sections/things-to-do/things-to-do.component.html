@@ -2,10 +2,10 @@
     <div class="w-4/5 lg:w-3/6 py-4">
         <div class="text-left py-5">
             <h3 class="inter text-xs font-medium text-white my-1">WHILE YOU'RE HERE</h3>
-            <p class="text-3xl lora text-white">Things to do in Lyon</p>
+            <p class="text-3xl lora text-white">Things to do</p>
         </div>
-        <div class="h-full mx-auto flex flex-row flex-wrap md:gap-x-1 lg:gap-x-6 justify-between py-4">
-            <div *ngFor="let amenity of amenities" class="amenity my-1 w-3/6 md:w-2/5">
+        <div class="h-full mx-auto flex flex-row flex-wrap gap-x-1 justify-between">
+            <div *ngFor="let amenity of amenities" class="amenity my-2 w-2/5">
                 <p class="light-green-text inter text-xs font-medium">{{amenity.type}}</p>
                 <p class="light-green-text lora text-lg">{{amenity.title}}</p>
                 <ul>
