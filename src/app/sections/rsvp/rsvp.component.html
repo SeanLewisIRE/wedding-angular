@@ -7,15 +7,15 @@
         
         <form class="contact-form flex flex-col" [formGroup]="rsvpForm" (ngSubmit)="sendEmail($event)">
             <label class="py-0.5 inter text-xs font-medium green-text">NAME(S) *</label>
-            <input class="my-1 px-1 py-0.5" type="text" formControlName="name" name="name" required>
+            <input class="my-1 px-1 py-0.5" type="text" formControlName="name" name="name" (input)="checkForMultiple($event)" required>
             <label class="py-0.5 inter text-xs font-medium green-text">EMAIL *</label>
             <input class="my-1 px-1 py-0.5" type="email" formControlName="email" name="email" required>
 
             <div class="my-5 flex flex-row justify-around">
                 <input type="radio" value="rsvp_yes" id="rsvp_yes" formControlName="rsvpBool" name="rsvpBool" required>
-                <label class="radio-label" for="rsvp_yes">{{rsvpForm.get('numberOfGuests')?.value != 1 || rsvpForm.get('numberOfChildren')?.value == 1 ? "WE'LL" : "I'LL"}} BE THERE</label> 
+                <label class="radio-label" for="rsvp_yes">{{rsvpForm.get('numberOfGuests')?.value != 1 || rsvpForm.get('numberOfChildren')?.value == 1 || commaPresent ? "WE'LL" : "I'LL"}} BE THERE</label> 
                 <input type="radio" value="rsvp_no" id="rsvp_no" formControlName="rsvpBool" name="rsvpBool" (click)="decline_button(false)">
-                <label class="radio-label" for="rsvp_no">{{rsvpForm.get('numberOfGuests')?.value != 1 || rsvpForm.get('numberOfChildren')?.value == 1 ? "WE" : "I"}} CAN'T MAKE IT</label>
+                <label class="radio-label" for="rsvp_no">{{rsvpForm.get('numberOfGuests')?.value != 1 || rsvpForm.get('numberOfChildren')?.value == 1 || commaPresent ? "WE" : "I"}} CAN'T MAKE IT</label>
             </div>
             
             <div *ngIf="rsvpForm.get('rsvpBool')?.value == 'rsvp_yes'" [@inOutAnimation]>

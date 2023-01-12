@@ -3,6 +3,10 @@
 @import 'tailwindcss/utilities';
 @import url('https://fonts.googleapis.com/css2?family=Inter&family=Lora&display=swap');
 
+html {
+    scroll-behavior: smooth;
+}
+
 .lora {
     font-family: 'Lora', serif;
 }

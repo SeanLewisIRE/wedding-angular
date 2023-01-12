@@ -39,8 +39,18 @@ export class RsvpComponent implements OnInit {
   }
 
   emailSent: string = "";
+  commaPresent: boolean = false;
 
   ngOnInit(): void {
+  }
+
+  checkForMultiple(e: Event) {
+    let input = (e.target as HTMLInputElement).value;
+    if (input.includes(',') || input.includes('and')){
+      this.commaPresent = true;
+    } else {
+      this.commaPresent = false;
+    }
   }
 
   decline_button(overallRsvp : boolean) {
