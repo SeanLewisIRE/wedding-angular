@@ -6,7 +6,7 @@
         </div>
         
         <form class="contact-form flex flex-col" [formGroup]="rsvpForm" (ngSubmit)="sendEmail($event)">
-            <label class="py-0.5 inter text-xs font-medium green-text">NAME *</label>
+            <label class="py-0.5 inter text-xs font-medium green-text">NAME(S) *</label>
             <input class="my-1 px-1 py-0.5" type="text" formControlName="name" name="name" required>
             <label class="py-0.5 inter text-xs font-medium green-text">EMAIL *</label>
             <input class="my-1 px-1 py-0.5" type="email" formControlName="email" name="email" required>
