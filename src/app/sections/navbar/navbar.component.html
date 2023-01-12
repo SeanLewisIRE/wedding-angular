@@ -5,6 +5,11 @@
                 href="#">
                 Á &amp; S
             </a>
+
+            <a  *ngIf="!this.showMenu" class="px-3 py-2 flex items-center text-xs uppercase font-bold leading-snug text-white mr-4" href="#RSVP">
+                <i class="fab fa-facebook-square text-lg leading-lg text-white"></i><span
+                    class="ml-2 text-white hover:green-text">RSVP</span>
+            </a>
             <button (click)="toggleNavbar()"
                 type="button"
                 class="opacity-100 lg:hidden fixed z-50 right-0 mx-2 bg-gray-900 inline items-center justify-center p-2 rounded-md
