@@ -24,3 +24,9 @@ nav {
         opacity: 1;
     }
 }
+
+@media (min-width: 1024px) {
+    .mobile-rsvp {
+        display: none;
+    }
+}
