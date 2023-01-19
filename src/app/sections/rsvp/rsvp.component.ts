@@ -39,17 +39,17 @@ export class RsvpComponent implements OnInit {
   }
 
   emailSent: string = "";
-  commaPresent: boolean = false;
+  multiplePresent: boolean = false;
 
   ngOnInit(): void {
   }
 
   checkForMultiple(e: Event) {
     let input = (e.target as HTMLInputElement).value;
-    if (input.includes(',') || input.includes('and')){
-      this.commaPresent = true;
+    if (input.includes(',') || input.includes('and') || input.includes('&')){
+      this.multiplePresent = true;
     } else {
-      this.commaPresent = false;
+      this.multiplePresent = false;
     }
   }
 

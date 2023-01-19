@@ -13,9 +13,9 @@
 
             <div class="my-5 flex flex-row justify-around">
                 <input type="radio" value="rsvp_yes" id="rsvp_yes" formControlName="rsvpBool" name="rsvpBool" required>
-                <label class="radio-label" for="rsvp_yes">{{rsvpForm.get('numberOfGuests')?.value != 1 || rsvpForm.get('numberOfChildren')?.value == 1 || commaPresent ? "WE'LL" : "I'LL"}} BE THERE</label> 
+                <label class="radio-label" for="rsvp_yes">{{rsvpForm.get('numberOfGuests')?.value != 1 || rsvpForm.get('numberOfChildren')?.value == 1 || multiplePresent ? "WE'LL" : "I'LL"}} BE THERE</label> 
                 <input type="radio" value="rsvp_no" id="rsvp_no" formControlName="rsvpBool" name="rsvpBool" (click)="decline_button(false)">
-                <label class="radio-label" for="rsvp_no">{{rsvpForm.get('numberOfGuests')?.value != 1 || rsvpForm.get('numberOfChildren')?.value == 1 || commaPresent ? "WE" : "I"}} CAN'T MAKE IT</label>
+                <label class="radio-label" for="rsvp_no">{{rsvpForm.get('numberOfGuests')?.value != 1 || rsvpForm.get('numberOfChildren')?.value == 1 || multiplePresent ? "WE" : "I"}} CAN'T MAKE IT</label>
             </div>
             
             <div *ngIf="rsvpForm.get('rsvpBool')?.value == 'rsvp_yes'" [@inOutAnimation]>
